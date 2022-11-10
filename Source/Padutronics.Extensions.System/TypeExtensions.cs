@@ -29,4 +29,9 @@ public static class TypeExtensions
     {
         return @this.GetConstructor(new[] { typeof(T1), typeof(T2), typeof(T3), typeof(T4), typeof(T5) });
     }
+
+    public static ConstructorInfo? GetDefaultConstructor(this Type @this)
+    {
+        return @this.GetConstructor(Type.EmptyTypes);
+    }
 }
