@@ -16,6 +16,12 @@ public static class ComparableExtensions
         return @this.CompareTo(lowerBound) > 0;
     }
 
+    public static bool IsGreaterThanOrEqualTo<T>(this T @this, T lowerBound)
+        where T : IComparable<T>
+    {
+        return @this.CompareTo(lowerBound) >= 0;
+    }
+
     public static bool IsLessThan<T>(this T @this, T upperBound)
         where T : IComparable<T>
     {
