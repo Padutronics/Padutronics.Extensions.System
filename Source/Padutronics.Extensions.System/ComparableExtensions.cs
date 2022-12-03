@@ -9,4 +9,10 @@ public static class ComparableExtensions
     {
         return @this.CompareTo(expectedValue) == 0;
     }
+
+    public static bool IsGreaterThan<T>(this T @this, T lowerBound)
+        where T : IComparable<T>
+    {
+        return @this.CompareTo(lowerBound) > 0;
+    }
 }
